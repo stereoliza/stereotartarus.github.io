@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shavo NFT</title>
+  </head>
+  <body>
+
+
+  <style>
+  body {
+      background-color: black;
+    }
+
+  img.invis {
+    display: none;
+  }
+  img.pic {
+    opacity: 0.65;
+    position: absolute;
+  }
+  img.mob {
+    width:33.14%;
+  }
+  img.foto {
+    position: absolute;
+    opacity: 0.75;
+  }
+
+  video {
+    position: fixed;
+    opacity: 0.5;
+    size: cover;
+  }
+
+  div {
+  position: relative;
+  animation-name: fotoa;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+  </style>
+
+
+  <img class ="invis" src='./4.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./9.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./10.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./11.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./12.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./13.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./14.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./15.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./16.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./17.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./18.jpeg' alt="artWork" width="100%" height="100%">
+
+  <video id="fire" controls muted >
+    <source src="./19.mp4">
+  </video>
+
+  <img class="foto" src="./8.png" alt="fsd" width="100%" height="100%">
+
+
+  <img class="mob" src="./5.jpeg" alt="mob" float="left" >
+  <img class="mob" src="./6.jpeg" alt="mob" float="inherit">
+  <img class="mob" src="./7.jpeg" alt="mob" float="right" >
+
+
+
+
+  </body>
+
+
+  <script>
+
+  let randomNumber = Math.floor((Math.random() * 10) + 1);
+  let artWorks = document.getElementsByClassName("invis");
+  let selectedArt = artWorks.item(randomNumber);
+  selectedArt.classList.remove("invis");
+  selectedArt.classList.add("pic")
+
+  setTimeout(function(){
+    document.getElementById("fire").play();
+  }, 2500);
+
+  </script>
+
+
+
+</body>
+</html>
