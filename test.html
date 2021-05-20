@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shavo NFT</title>
+  </head>
+  <body>
+
+
+  <style>
+  body {
+    background-image: url("./22.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: brightness(250%);
+
+  }
+  .brightness {filter: brightness(40%);}
+
+  img.invis {
+    display: none;
+  }
+  img.pic {
+    opacity: 0.55;
+    position: absolute;
+  }
+
+  img.invisPhoto {
+    display: none;
+  }
+  img.foto {
+    width: 800px;
+    height: 800px;
+    opacity: 0.75;
+    float:right;
+    position:fixed;
+    right:180px;
+    top:-30px;
+    mix-blend-mode: color-burn;
+  }
+  video {
+    position: fixed;
+    opacity: 0.5;
+    left:-100px;
+    top:-50px;
+  }
+
+  .spinable {
+    width: 800px;
+    height: 800px;
+    animation-name: spin;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    transform: rotate(-90deg);
+    animation-timing-function: ease-in-out;
+    float:right;
+    position:fixed;
+    right:180px;
+    top:-30px;
+     /* transform: rotate(30grad); */
+     /* transform: rotate(45turn);  */
+  }
+
+  @keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(13deg);
+      }
+  }
+
+  .full-screen-width {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    width: 100vw;
+  }
+
+
+  </style>
+
+
+  <img class ="invis" src='./4.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./9.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./10.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./11.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./12.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./13.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./14.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./15.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./16.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./17.jpeg' alt="artWork" width="100%" height="100%">
+  <img class ="invis" src='./18.jpeg' alt="artWork" width="100%" height="100%">
+
+  <video id="fire" controls muted >
+    <source src="./19.mp4">
+  </video>
+
+  <img class="invisPhoto" src="./8.png" alt="fsd" width="100%" height="100%" >
+  <img class="invisPhoto" src="./20.png" alt="fsd" width="100%" height="100%" >
+  <img class="invisPhoto" src="./21.png" alt="fsd" width="100%" height="100%" >
+
+
+
+  <script>
+
+  let randomNumber = Math.floor(Math.random() * 10);
+  let artWorks = document.getElementsByClassName("invis");
+  let selectedArt = artWorks.item(randomNumber);
+  selectedArt.classList.remove("invis");
+  selectedArt.classList.add("pic")
+  selectedArt.classList.add("full-screen-width");
+
+  let randomNumberF = Math.floor(Math.random() * 3);
+  let allPhotos = document.getElementsByClassName("invisPhoto");
+  let selectedFoto = allPhotos.item(randomNumberF);
+  selectedFoto.classList.remove("invisPhoto");
+  selectedFoto.classList.add("foto");
+
+
+  setTimeout(function(){
+    document.getElementById("fire").play();
+  }, 2000);
+
+  setTimeout(function(){
+      selectedFoto.classList.add("spinable");
+  }, 3000);
+
+  </script>
+
+
+
+</body>
+</html>
